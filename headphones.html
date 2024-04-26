@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Button with Image</title>
 </head>
 <body>
-    <a id="downloadLink" href="path_to_your_file.pdf" download="curren_black-Photoroom.png">Download File</a>
+
+  <!-- Your file download link with image -->
+  <a id="downloadLink" href="curren_black-Photoroom.png" download="curren_black-Photoroom.png">
+    <img src="curren_black-Photoroom.png" alt="Download File">
+  </a>
+
+  <script>
+    // If you want to dynamically change the file to download
+    // You can use JavaScript like this
+    document.getElementById("downloadLink").addEventListener("click", function() {
+      // Change the href attribute to the new file path
+      this.href = "curren_black-Photoroom.png";
+      // Change the download attribute to the new file name
+      this.download = "curren_black-Photoroom.png";
+    });
+  </script>
+
 </body>
 </html>
