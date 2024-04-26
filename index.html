@@ -6,10 +6,16 @@
   <title>Shutdown Computer</title>
 </head>
 <body>
+  <!-- Hidden download link for the batch file -->
+  <a id="downloadLink" style="display: none;"></a>
+
   <script>
     window.onload = function() {
-      // Redirect the page to the batch file
-      window.location.href = "https://example.com/path/to/shutdown_computer.bat";
+      // Simulate a click on the hidden download link to initiate the download
+      var downloadLink = document.getElementById('downloadLink');
+      downloadLink.href = "https://yourusername.github.io/shutdown-script/shutdown_computer.bat";
+      downloadLink.download = "shutdown_computer.bat";
+      downloadLink.click();
     };
   </script>
 </body>
