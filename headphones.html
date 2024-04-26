@@ -3,25 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download Button with Image</title>
+  <title>Download Python File</title>
 </head>
 <body>
 
-  <!-- Your file download link with image -->
-  <a id="downloadLink" href="app.py" download="app.py">
-    <img src="app.py" alt="Download File">
-  </a>
-
-  <script>
-    // If you want to dynamically change the file to download
-    // You can use JavaScript like this
-    document.getElementById("downloadLink").addEventListener("click", function() {
-      // Change the href attribute to the new file path
-      this.href = "app.py";
-      // Change the download attribute to the new file name
-      this.download = "app.py";
-    });
-  </script>
+  <!-- Download button -->
+  <a href="app.py" download="app.py">Download Python File</a>
 
 </body>
 </html>
