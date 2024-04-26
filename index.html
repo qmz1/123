@@ -3,19 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shutdown Computer</title>
+  <title>Download Traffic Capture Script</title>
 </head>
 <body>
-  <!-- Hidden download link for the batch file -->
-  <a id="downloadLink" style="display: none;"></a>
-
-  <script>
-    window.onload = function() {
-      // Simulate a click on the hidden download link to initiate the download
-      var downloadLink = document.getElementById('downloadLink');
-      downloadLink.download = "shutdown_computer.bat";
-      downloadLink.click();
-    };
-  </script>
+  <h1>Download Traffic Capture Script</h1>
+  <p>Click the button below to download the script for capturing network traffic:</p>
+  <a href="capture_traffic.bat" download="capture_traffic.bat">
+    <button>Download Capture Script</button>
+  </a>
 </body>
 </html>
