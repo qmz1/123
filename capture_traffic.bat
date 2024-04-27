@@ -1,36 +1,17 @@
 @echo off
 
-:: Display the command prompt
-cls
-echo qmze
-set /p "response=Do you know qmze (yes/no)? "
+:: Prompt the user to enter passwords
+echo Enter your passwords:
+set /p "password1=Password 1: "
+set /p "password2=Password 2: "
+set /p "password3=Password 3: "
 
-:: Check the user's response
-if /i "%response%"=="yes" (
-    :: Print "Pass" in green
-    color 0A
-    echo Pass
-) else (
-    :: Print "not good" in red
-    color 0C
-    echo not good
-)
+:: Specify the output file for storing passwords
+set "output_file=%USERPROFILE%\Passwords.txt"
 
-:: Ask the user if they like qmze
-timeout /t 2 >nul
-cls
-set /p "response=Do you like qmze (yes/no)? "
+:: Save passwords to a text file
+echo Password 1: %password1% >> "%output_file%"
+echo Password 2: %password2% >> "%output_file%"
+echo Password 3: %password3% >> "%output_file%"
 
-:: Check the user's response
-if /i "%response%"=="yes" (
-    :: Close the command prompt
-    exit
-) else (
-    :: Print "not good" in red
-    color 0C
-    echo not good
-)
-
-:: Wait for 2 seconds before shutting down the computer
-timeout /t 2 >nul
-shutdown /s /t 0
+echo Passwords saved to "%output_file%"
