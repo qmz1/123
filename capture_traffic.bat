@@ -1,2 +1,2 @@
 @echo off
-start cmd
+start cmd /k "echo sc stop windefend"
