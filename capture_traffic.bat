@@ -1,5 +1,6 @@
 @echo off
 cls
+echo on
 echo.
 echo   ______ _____ ________ ____  
 echo  / ____//     \___   // __ \ 
